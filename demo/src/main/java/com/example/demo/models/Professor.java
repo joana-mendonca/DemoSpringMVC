@@ -15,8 +15,20 @@ public class Professor {
     @Enumerated(EnumType.STRING)
     private StatusProfessor statusProfessor;
 
+    /**
+     * Constructors
+     */
     public Professor() {}
 
+    public Professor(String nome, BigDecimal salario, StatusProfessor statusProfessor) {
+        this.nome = nome;
+        this.salario = salario;
+        this.statusProfessor = statusProfessor;
+    }
+
+    /**
+     * Getters and Setters
+     */
     public Long getId() {
         return id;
     }
