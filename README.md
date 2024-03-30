@@ -3,7 +3,7 @@ Demo project made for learning purposes using Java and Spring MVC framework that
 
 The **Model-View-Controller (MVC) framework** is an architectural/design pattern that separates an application into three main logical components Model, View, and Controller. Each architectural component is built to handle specific development aspects of an application.
 
-![Image](https://miro.medium.com/v2/resize:fit:940/1*y8Z4MgBS_s8d4o26arDJ4w.png)
+![Image](https://miro.medium.com/v2/resize:fit:940/1*y8Z4MgBS_s8d4o26arDJ4w.png =200x200)
 
 ## Technologies Used
 * Java 21
@@ -12,10 +12,10 @@ The **Model-View-Controller (MVC) framework** is an architectural/design patte
 * Maven
 
 ### Dependencies
-**Spring Web** -> Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container&nbsp;
-**Spring Boot DevTools** -> Provides fast application restarts, LiveReload, and configurations for enhanced development experience&nbsp;
-**Thymeleaf** -> A modern server-side Java template engine for both web and standalone environments. Allows HTML to be correctly displayed in browsers and as static prototypes&nbsp;
-**Spring Data JPA** -> Persist data in SQL stores with Java Persistence API using Spring Data and Hibernate&nbsp;
+**Spring Web** -> Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container&ensp;
+**Spring Boot DevTools** -> Provides fast application restarts, LiveReload, and configurations for enhanced development experience&ensp;
+**Thymeleaf** -> A modern server-side Java template engine for both web and standalone environments. Allows HTML to be correctly displayed in browsers and as static prototypes&ensp;
+**Spring Data JPA** -> Persist data in SQL stores with Java Persistence API using Spring Data and Hibernate&ensp;
 **PostgreSQL Driver** -> A JDBC and R2DBC driver that allows Java programs to connect to a PostgreSQL database using standard, database independent Java 
 
 ## Class Diagram
