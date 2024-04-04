@@ -1,7 +1,7 @@
 # SpringMVC-demo
 Demo project made for learning purposes using Java and Spring MVC framework that follows the MVC architectural design pattern. This pattern allows to separate an application into three main logical components (Model, View, and Controller). Each architectural component is built to handle specific development aspects of an application.
 
-<img width="400" height="400" alt="Spring MVC framework" src="https://miro.medium.com/v2/resize:fit:940/1*y8Z4MgBS_s8d4o26arDJ4w.png">
+<img width="477" height="400" alt="Spring MVC framework" src="https://miro.medium.com/v2/resize:fit:940/1*y8Z4MgBS_s8d4o26arDJ4w.png">
 
 ## Technologies Used
 * Java 21
@@ -14,11 +14,11 @@ Demo project made for learning purposes using Java and Spring MVC framework that
 
 Dependency | Description
 --- | ---
-[**Spring Web**] | Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container.
-[**Spring Boot DevTools**] | Provides fast application restarts, LiveReload, and configurations for enhanced development experience.
-[**Thymeleaf**] | A modern server-side Java template engine for both web and standalone environments. Allows HTML to be correctly displayed in browsers and as static prototypes.
-[**Spring Data JPA**] | Persist data in SQL stores with Java Persistence API using Spring Data and Hibernate.
-[**PostgreSQL Driver**] | A JDBC and R2DBC driver that allows Java programs to connect to a PostgreSQL database using standard, database independent Java.
+**Spring Web** | Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container.
+**Spring Boot DevTools** | Provides fast application restarts, LiveReload, and configurations for enhanced development experience.
+**Thymeleaf** | A modern server-side Java template engine for both web and standalone environments. Allows HTML to be correctly displayed in browsers and as static prototypes.
+**Spring Data JPA** | Persist data in SQL stores with Java Persistence API using Spring Data and Hibernate.
+**PostgreSQL Driver** | A JDBC and R2DBC driver that allows Java programs to connect to a PostgreSQL database using standard, database independent Java.
 
 ## Class Diagram
 ```mermaid
