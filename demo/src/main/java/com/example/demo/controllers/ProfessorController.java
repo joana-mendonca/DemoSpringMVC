@@ -28,9 +28,9 @@ public class ProfessorController {
     }
 
     @GetMapping("/professores/new")
-    public ModelAndView newProfessor() {
+    public ModelAndView newProfessor(ProfessorDTO novoProfessor) {
         ModelAndView mv = new ModelAndView("professores/new");
-        mv.addObject("statusProfessor", StatusProfessor.values());
+        mv.addObject("listaStatusProfessor", StatusProfessor.values());
 
         return mv;
     }
@@ -44,17 +44,21 @@ public class ProfessorController {
      * @return              the Professors' list page view
      */
     @PostMapping("/professores")
-    public String create(@Valid ProfessorDTO novoProfessor, BindingResult bindingResult) {
+    public ModelAndView create(@Valid ProfessorDTO novoProfessor, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
+            ModelAndView mv = new ModelAndView("redirect:/professores/new");
             System.out.println("---------------DEU CAGADA-----------------------");
-            return "redirect:/professores/new";
+            mv.addObject("listaStatusProfessor", StatusProfessor.values());
+
+            return mv;
         } else {
             Professor professor = novoProfessor.toProfessor();
+
             System.out.println(professor);
             /*Inserts values in the database*/
             this.professorRepository.save(professor);
 
-            return "redirect:/professores";
+            return new ModelAndView("redirect:/professores");
         }
     }
 }
