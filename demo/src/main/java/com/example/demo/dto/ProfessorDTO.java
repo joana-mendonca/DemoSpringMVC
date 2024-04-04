@@ -2,6 +2,9 @@ package com.example.demo.dto;
 
 import com.example.demo.models.Professor;
 import com.example.demo.models.StatusProfessor;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
 
@@ -10,8 +13,12 @@ import java.math.BigDecimal;
  * We can use this technique to facilitate communication between two systems
  * (like an API and a server) without potentially exposing sensitive information.
  */
-public class RequisicaoNovoProfessor {
+public class ProfessorDTO {
+    @NotBlank
+    @NotNull
     private String nome;
+    @DecimalMin(value = "0.0", inclusive = true)
+    @NotNull
     private BigDecimal salario;
     private StatusProfessor statusProfessor;
 
@@ -51,7 +58,7 @@ public class RequisicaoNovoProfessor {
 
     @Override
     public String toString() {
-        return "RequisicaoNovoProfessor{" +
+        return "ProfessorDTO{" +
                 "nome='" + nome + '\'' +
                 ", salario=" + salario +
                 ", statusProfessor=" + statusProfessor +

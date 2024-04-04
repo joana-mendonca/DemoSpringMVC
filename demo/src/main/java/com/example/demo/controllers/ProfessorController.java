@@ -1,11 +1,13 @@
 package com.example.demo.controllers;
 
-import com.example.demo.dto.RequisicaoNovoProfessor;
+import com.example.demo.dto.ProfessorDTO;
 import com.example.demo.models.Professor;
 import com.example.demo.models.StatusProfessor;
 import com.example.demo.repositories.ProfessorRepository;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -42,12 +44,17 @@ public class ProfessorController {
      * @return              the Professors' list page view
      */
     @PostMapping("/professores")
-    public String create(RequisicaoNovoProfessor novoProfessor) {
-        Professor professor = novoProfessor.toProfessor();
-        System.out.println(professor);
-        /*Inserts values in the database*/
-        this.professorRepository.save(professor);
+    public String create(@Valid ProfessorDTO novoProfessor, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            System.out.println("---------------DEU CAGADA-----------------------");
+            return "redirect:/professores/new";
+        } else {
+            Professor professor = novoProfessor.toProfessor();
+            System.out.println(professor);
+            /*Inserts values in the database*/
+            this.professorRepository.save(professor);
 
-        return "redirect:/professores";
+            return "redirect:/professores";
+        }
     }
 }
