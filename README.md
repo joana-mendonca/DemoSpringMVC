@@ -1,4 +1,4 @@
-# SpringMVC-demo
+# Demo Spring MVC
 Demo project made for learning purposes using Java and Spring MVC framework that follows the MVC architectural design pattern.
 
 **Spring MVC** is a **web application framework** that is part of the **Spring Framework**. It is designed to make it easy to build web applications using the **Model-View-Controller (MVC) design pattern**.
